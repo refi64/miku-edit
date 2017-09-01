@@ -3,6 +3,19 @@ miku-edit
 
 Hatsune Miku/VOCALOID-oriented text editor themes, for both Howl and Atom.
 
+Screenshots
+***********
+
+Howl
+^^^^
+
+.. image:: howl.png
+
+Atom
+^^^^
+
+.. image:: atom.png
+
 Installing
 **********
 
