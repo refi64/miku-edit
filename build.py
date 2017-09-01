@@ -42,18 +42,12 @@ def assets():
 def install_howl():
     target_dir = HOME / '.howl' / 'bundles'
     target_dir.mkdir(exist_ok=True)
-    (target_dir / 'mikuedit').symlink_to(Path('howl').absolute())
+    (target_dir / 'miku-edit').symlink_to(Path().absolute())
 
 
 @task('install:atom')
 def install_atom():
     run(['apm', 'link'], cwd='atom')
-
-
-@task()
-def install():
-    invoke('install:howl')
-    invoke('install:atom')
 
 
 if __name__ == '__main__':
