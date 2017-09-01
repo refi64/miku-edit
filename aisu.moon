@@ -1,7 +1,7 @@
 {
   meta:
     author: 'Ryan Gonzalez'
-    description: ''
-    license: 'LICENSE'
+    description: 'A Hatsune Miku/VOCALOID-oriented syntax theme'
+    license: 'MIT'
     version: 'Version here'
 }
