@@ -1,11 +1,9 @@
-import delegate_to from howl.util.table
-
 -- Colors based on:
 -- http://www.colourlovers.com/palette/2060305/Hatsune_Mikus_hair
 -- http://www.color-hex.com/color-palette/9535
 -- http://vocaloidcolorpalette.tumblr.com/
 
-
+window = '#06757f'
 background = '#00ddc0'
 current = '#00346e'
 foreground = '#ffffff'
@@ -24,61 +22,70 @@ selection = background
 embedded_bg = '#03363a'
 
 
-content_box =
-  border:
-    width: 1
-    color: border_color
-    alpha: 0.4
-
-  border_right:
-    width: 3
-    color: border_color
-    alpha: 0.4
-
-  border_bottom:
-    width: 3
-    color: border_color
-    alpha: 0.4
-
-  header:
-    background:
-      color: border_color
-      alpha: 0.4
-
-    border_bottom:
-      color: border_color
-      alpha: 0.4
-
-    color: border_color
-    font: bold: true
-    padding: 1
-
-  footer:
-    background:
-      color: border_color
-      alpha: 0.4
-
-    border_top:
-      color: border_color
-      alpha: 0.4
-
-    color: border_color
-    font: bold: true
-    padding: 1
-    alpha: 0.4
-
-
 {
   window:
     background:
+      color: window
       image:
-        path: theme_file 'assets/bg.png'
+        alpha: 0.07
+        path: theme_file 'assets/background.png'
       position: 'center'
     status:
       font: bold: true, italic: true
       color: blue
 
-  editor: delegate_to content_box,
+  content_box:
+    background:
+      color: window
+
+    border:
+      width: 1
+      color: border_color
+      alpha: 0.4
+
+  editor:
+    border:
+      width: 1
+      color: border_color
+      alpha: 0.4
+
+    border_right:
+      width: 3
+      color: border_color
+      alpha: 0.4
+
+    border_bottom:
+      width: 3
+      color: border_color
+      alpha: 0.4
+
+    header:
+      background:
+        color: border_color
+        alpha: 0.4
+
+      border_bottom:
+        color: border_color
+        alpha: 0.4
+
+      color: border_color
+      font: bold: true
+      padding: 1
+
+    footer:
+      background:
+        color: border_color
+        alpha: 0.4
+
+      border_top:
+        color: border_color
+        alpha: 0.4
+
+      color: border_color
+      font: bold: true
+      padding: 1
+      alpha: 0.4
+
     scrollbars:
       slider:
         color: blue
@@ -108,24 +115,6 @@ content_box =
       foreground: aqua,
       :background,
       line_width: 1
-
-    -- indentation_guide_1:
-    --   type: flair.PIPE,
-    --   foreground: blue,
-    --   foreground_alpha: 0.5
-    --   line_width: 1
-
-    -- indentation_guide_2:
-    --   type: flair.PIPE,
-    --   foreground: green,
-    --   foreground_alpha: 0.5
-    --   line_width: 1
-
-    -- indentation_guide_3:
-    --   type: flair.PIPE,
-    --   foreground: green,
-    --   foreground_alpha: 0.3
-    --   line_width: 1
 
     edge_line:
       type: flair.PIPE,
